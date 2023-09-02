@@ -2,7 +2,9 @@ package com.inflearn.effectivejava.chap3;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.springframework.util.ReflectionUtils;
 
+import java.lang.invoke.MethodHandles;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 
@@ -37,5 +39,8 @@ public class Main {
         EnumSingleton instance2 = EnumSingleton.INSTANCE;
         System.out.println(instance1.hashCode());
         System.out.println(instance2.hashCode());
+
+        MethodHandles.Lookup lookup = MethodHandles.lookup();
+        
     }
 }
