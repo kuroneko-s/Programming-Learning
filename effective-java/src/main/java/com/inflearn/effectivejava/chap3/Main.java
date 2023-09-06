@@ -2,11 +2,14 @@ package com.inflearn.effectivejava.chap3;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.springframework.util.ReflectionUtils;
 
+import java.io.Serializable;
 import java.lang.invoke.MethodHandles;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -41,6 +44,31 @@ public class Main {
         System.out.println(instance2.hashCode());
 
         MethodHandles.Lookup lookup = MethodHandles.lookup();
-        
+
+        List<Person> personList = new ArrayList<>();
+        personList.add(new Person());
+        personList.add(new Person());
+
+        Comparator<Person> compare = (Comparator<Person>) Person::compare;
+        personList.sort(compare);
+
+        // Externalizable
+    }
+
+    static class Person implements Serializable {
+        private static final long serialVersionUID = -2212162887670277371L;
+        private int number;
+
+        public int getNumber() {
+            return number;
+        }
+
+        public void setNumber(int number) {
+            this.number = number;
+        }
+
+        public int compare(Person p1) {
+            return p1.number - this.number;
+        }
     }
 }
