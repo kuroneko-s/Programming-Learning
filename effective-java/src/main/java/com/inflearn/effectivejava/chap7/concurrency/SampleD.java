@@ -16,7 +16,7 @@ public class SampleD {
     private static final int before = 2000;
     private static final int after = 10;
 
-    private static final ForkJoinPool commonPool = new ForkJoinPool(after);
+    private static final ForkJoinPool commonPool = new ForkJoinPool(before);
 
     @SneakyThrows
     public static void main(String[] args) {

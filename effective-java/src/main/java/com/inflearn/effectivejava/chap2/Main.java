@@ -23,7 +23,7 @@ public class Main {
         ArrayList<String> list1 = new ArrayList<>();
         list1.add("123");
         Object obj = list1;
-        ArrayList<Integer> list2 = (ArrayList<Integer>)obj;
+        ArrayList<Integer> list2 = (ArrayList<Integer>) obj;
         list2.add(123);
 
         List<String> list3 = Collections.checkedList(new ArrayList<>(), String.class);
