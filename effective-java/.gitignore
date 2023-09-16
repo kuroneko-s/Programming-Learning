@@ -38,3 +38,5 @@ out/
 
 ### docs
 **/docs
+
+*.xml
