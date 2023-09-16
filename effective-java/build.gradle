@@ -29,6 +29,10 @@ dependencies {
     implementation 'org.projectlombok:lombok:1.18.28'
     annotationProcessor 'org.projectlombok:lombok:1.18.28'
 
+    // https://mvnrepository.com/artifact/io.projectreactor/reactor-core
+    implementation group: 'io.projectreactor', name: 'reactor-core', version: '3.5.10'
+
+
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
