@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JAVA.test.iml" filepath="$PROJECT_DIR$/.idea/modules/JAVA.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Programming-Learning.iml" filepath="$PROJECT_DIR$/.idea/Programming-Learning.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/effective-java.main.iml" filepath="$PROJECT_DIR$/.idea/modules/effective-java.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/gof/gof.iml" filepath="$PROJECT_DIR$/gof/gof.iml" />
