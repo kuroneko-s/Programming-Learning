@@ -35,12 +35,19 @@ public class PhoneNumber {
         return Objects.hash(firstNumber, middleNumber, lastNumber);
     }
 
+    // IDE를 사용해서 만든 경우. 해당 클래스의 의미에 맞는 동작이 아님.
+//    @Override
+//    public String toString() {
+//        return "PhoneNumber{" +
+//                "firstNumber=" + firstNumber +
+//                ", middleNumber=" + middleNumber +
+//                ", lastNumber=" + lastNumber +
+//                '}';
+//    }
+
+    // 의미에 맞게 수정한 경우.
     @Override
     public String toString() {
-        return "PhoneNumber{" +
-                "firstNumber=" + firstNumber +
-                ", middleNumber=" + middleNumber +
-                ", lastNumber=" + lastNumber +
-                '}';
+        return String.format("PhoneNumber - %03d-%03d-%04d", this.firstNumber, this.middleNumber, this.lastNumber);
     }
 }
