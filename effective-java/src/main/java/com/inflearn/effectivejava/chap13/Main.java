@@ -1,5 +1,6 @@
 package com.inflearn.effectivejava.chap13;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -22,5 +23,13 @@ public class Main {
         list1.add("c");
         List<String> list2 = List.copyOf(list1);
         System.out.println(list2);
+
+        PhoneNumber phoneNumber = new PhoneNumber(010, 9960, 3956);
+        // phoneNumber.clone();
+        PhoneNumber newPhoneNumber = new PhoneNumber(phoneNumber);
+
+        System.out.println(phoneNumber.equals(newPhoneNumber));
+        PhoneNumber secondNewPhoneNumber = PhoneNumber.newInstance(phoneNumber);
+        System.out.println(phoneNumber.equals(secondNewPhoneNumber));
     }
 }

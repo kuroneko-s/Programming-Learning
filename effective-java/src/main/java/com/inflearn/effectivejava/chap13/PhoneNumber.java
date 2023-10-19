@@ -1,7 +1,10 @@
 package com.inflearn.effectivejava.chap13;
 
+import lombok.Getter;
+
 import java.util.Objects;
 
+@Getter
 public class PhoneNumber {
     private final int firstNumber;
     private final int middleNumber;
@@ -11,6 +14,17 @@ public class PhoneNumber {
         this.firstNumber = firstNumber;
         this.middleNumber = middleNumber;
         this.lastNumber = lastNumber;
+    }
+
+    // 복사 생성자
+    public PhoneNumber(PhoneNumber phoneNumber) {
+        this.firstNumber = phoneNumber.getFirstNumber();
+        this.middleNumber = phoneNumber.getMiddleNumber();
+        this.lastNumber = phoneNumber.getLastNumber();
+    }
+
+    public static PhoneNumber newInstance(PhoneNumber phoneNumber) {
+        return new PhoneNumber(phoneNumber);
     }
 
     @Override
