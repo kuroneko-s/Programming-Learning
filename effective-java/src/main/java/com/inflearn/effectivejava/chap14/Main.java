@@ -1,9 +1,11 @@
 package com.inflearn.effectivejava.chap14;
 
+import com.inflearn.effectivejava.chap10.symmetry.CaseInsensitiveString;
 import com.inflearn.effectivejava.chap13.PhoneNumber;
 
 import java.math.BigDecimal;
 import java.util.Comparator;
+import java.util.HashSet;
 import java.util.TreeSet;
 
 public class Main {
@@ -24,9 +26,15 @@ public class Main {
         BigDecimal x = new BigDecimal("2.0");
         BigDecimal y = new BigDecimal("2.00");
 
-        System.out.println(x.compareTo(y));
-        System.out.println(y.equals(x));
+        HashSet<BigDecimal> test = new HashSet<>();
+        test.add(x);
+        test.add(y);
 
+        System.out.println(test);
+        TreeSet<BigDecimal> test2 = new TreeSet<>();
+        test2.add(x);
+        test2.add(y);
+        System.out.println(test2);
 
     }
 }

@@ -82,7 +82,7 @@ public class FunctionalTest {
         var collect = list.stream()
                 .sorted(Comparator.reverseOrder())
                 .distinct()
-                .toList();
+                .collect(Collectors.toList());
 
         var sum = IntStream.range(0, 10)
                 .filter(v -> v % 2 == 0)
